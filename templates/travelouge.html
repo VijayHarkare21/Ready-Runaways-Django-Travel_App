@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block csscontent %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/travelouge.css' %}">
+{% endblock %}
+    
+{% block title %}
+    <title>Travelouge</title>
+{% endblock %}
+
+{% block jumbotron %}
+<div class="text-capitalize text-center">
+    <h1 class="text1">
+        TRAVEL BLOG
+    </h1>
+    <br>
+    <q>Travelling – It leaves you speechless, then turns you into a storyteller.......</q>
+    <p>-Ibn Battuta</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<div class="moreBlogs text-center">
+    <div class="container ">
+        <h2>BLOGS</h2>
+        <br>
+        <div class="grid-container">
+        {% for blog in blogs %}
+        <div class="grid-item">
+            <div class="card" style="width:22rem; height:16rem;">
+                <img src="{{blog.thumbnail.url}}" style="width: 350px; height: 175px; text-align:center;" class="card-img-top images" alt="...">
+                <div class="card-body" style="text-align: center;">
+                    <a href="{% url 'view_blog' blog.id %}"><h5 class="card-title">{{blog.title}}</h5></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="trekking" style="background-image: url('/static/img/cover.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-5 bgw" style="padding: 20px; text-align:justify;">
+                <h2 class="text-center">TREKKING</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia Possimus modi sint voluptatum! Quae porro dicta voluptatibus ipsam quos iure num quam minima voluptate doloribus, cupiditate similique?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia Possimus modi sint voluptatum! Quae porro dicta voluptatibus ipsam quos iure quam minima voluptate doloribus, cupiditate similique?</p>  
+                <br>     
+                <div style="text-align: center;">
+                    <button class="explore center"><a href="{% url 'view_blog' id=2 %}">EXPLORE</a></button>
+                </div>           
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 

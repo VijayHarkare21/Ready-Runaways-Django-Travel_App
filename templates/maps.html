@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block csscontent %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+    
+{% block title %}
+    <title>Maps</title>
+{% endblock %}
+
+{% block content %}
+<style>
+    h3 {
+        margin-bottom: 10px;
+      }
+    .lb {
+        display: inline-block;
+        width: 350px;
+    }
+    .in {
+        padding: 5px 10px;
+    }
+</style>
+<div class="container">
+    <br>
+    <br>
+    <h2 class="best text-center">MAPS</h2>
+    <br>
+    <form action="http://maps.google.com/maps" method="get" target="_blank">
+        <div style="text-align: center;">
+            <h3>
+                <label class="lb" for="saddr">Enter starting location</label>
+                <input class="in" type="text" name="saddr" />
+            </h3>
+            <h3>
+                <label class="lb" for="daddr">Enter destination location</label>
+                <input class="in" type="text" name="daddr" />
+            </h3>
+        </div>
+        <h3 class="text-center">
+            <input class="in" type="submit" value="Get directions" />
+        </h3>
+    </form>      
+<br>
+</div>
+{% endblock %}

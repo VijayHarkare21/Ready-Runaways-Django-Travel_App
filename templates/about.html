@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block csscontent %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock %}
+    
+{% block title %}
+    <title>About us </title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center" style="color: #083d90">About Us</h1>
+    <div class="row" style="text-align: justify;">
+        <div class="col-sm-6">
+            <p>Ready Runaways Online Pvt Ltd based in Mumbai India, is one of India's leading online travel companies and operates the website readyrunaways.com. The company provides information, pricing, availability, and booking facility for domestic and international air travel, domestic and international hotel bookings, holiday packages, buses, trains, in city activities, inter-city and point-to-point cabs, homestays and cruises. As a leading platform of accommodation options, Ready Runaways provides real-time bookings for more than 83,000 hotels in India and over 800,000 hotels around the world.
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p>Launched in August 2019, Ready Runaways was ranked the Most Trusted e-Commerce Travel Brand in India in the Economic Times Brand Equity Survey 2016 for the second successive year, and has won the award for 'First Prize - Domestic Tour Operator (Rest of India)' at the India Tourism Awards held in July 2016.</p>
+            <br>      
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="profile">
+                <div class="card"> 
+                    <br>
+                    <br>
+                    <h4>Vijay Harkare</h4>
+                    <p>60004200078</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="profile">
+                <div class="card">
+                    <br>
+                    <br>
+                    <h4>Vidhi Kansara</h4>
+                    <p>60004200087</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="profile">
+                <div class="card">
+                    <br>
+                    <br>
+                    <h4>Pranay Prajapati</h4>
+                    <p>60004200089</p>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <br><br><br>
+</div>
+{% endblock %}
